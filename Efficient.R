@@ -104,7 +104,7 @@ eff.frontier <- function (returns, short="no", max.allocation=NULL,
   
     # Run the eff.frontier function based on no short and 50% alloc. restrictions
     eff <- eff.frontier(returns=returns$R, short="no", max.allocation=1,
-                      risk.premium.up=1, risk.increment=.001)
+                        risk.premium.up=.5, risk.increment=.005)
   
     # Find the optimal portfolio
     pt <- eff[eff$sharpe==max(eff$sharpe),]
