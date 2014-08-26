@@ -31,7 +31,7 @@ sym_gtaa_data <- function(strsym, prev_month=FALSE) {
   m$SMA10 <- SMA(Cl(m), 10)
   gt_sma <- as.logical(Cl(m[idx]) > m[idx]$SMA10)
   close <- as.numeric(Cl(m[idx]))
-  Srank <- ceiling(.5*ret1m+.3*ret3m+.15*ret6m+.05*ret12m)
+  Srank <- ceiling(.5*ret1m*100 +.3*ret3m*100 +.15*ret6m*100 +.05*ret12m*100)
   if (Srank < 0) Srank <- 0
   #return a list with appropriate names
   res <- list(Sym=nm, R1m=ret1m, R3m=ret3m, R6m=ret6m, R12m=ret12m, Close=close, AvgRet=avg_ret, SRank=Srank, OverMA=gt_sma)

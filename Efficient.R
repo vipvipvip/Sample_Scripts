@@ -1,4 +1,4 @@
-setwd("C:/R/Sample_Scripts")
+#setwd("C:/R/Sample_Scripts")
 # Economist at Large
 # Modern Portfolio Theory
 # Use solve.QP to solve for efficient frontier
